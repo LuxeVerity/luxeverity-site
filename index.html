@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luxe Verity — Fullpage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{font-family:'IBM Plex Sans',sans-serif;color:#0f1115;scroll-behavior:smooth;overflow:hidden}
+    h1,h2,h3{font-family:'Playfair Display',serif;margin:0;line-height:1.2}
+    .fullpage{height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory}
+
+    .section{width:100%;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;scroll-snap-align:start;position:relative;padding:2rem;text-align:center}
+    .bg{position:absolute;inset:0;background-position:center;background-size:cover;z-index:-2}
+    .overlay{position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:-1}
+    .inner{max-width:1100px;margin:auto;color:#fff}
+    .gold{color:#c9a227}
+
+    .grid{display:grid;gap:1.2rem}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .card{background:rgba(255,255,255,.08);backdrop-filter:blur(4px);padding:1rem;border-radius:12px;text-align:left}
+    .btn{display:inline-block;padding:.65rem 1.2rem;border-radius:999px;background:#c9a227;color:#111;text-decoration:none;margin-top:1rem;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid #c9a227;color:#c9a227}
+
+    .img{width:100%;border-radius:10px;margin:.4rem 0}
+    @media(max-width:900px){.grid-3{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="fullpage">
+
+    <!-- Hero #1 -->
+    <section class="section">
+      <div class="bg" style="background-image:url('./assets/hero-1.jpg')"></div>
+      <div class="overlay"></div>
+      <div class="inner">
+        <h1>We bring hotels to life —<br><span class="gold">from idea to opening night.</span></h1>
+        <p>Design. Supply. Delivery. Seamless integration for world-class hospitality.</p>
+      </div>
+    </section>
+
+    <!-- Hero #2 -->
+    <section class="section">
+      <div class="bg" style="background-image:url('./assets/hero-2.jpg')"></div>
+      <div class="overlay"></div>
+      <div class="inner">
+        <h2>Three Specialists. <span class="gold">One Seamless Journey</span></h2>
+        <div class="grid grid-3" style="margin-top:1.6rem">
+          <div class="card">
+            <img src="./assets/logos/indezin.svg" alt="InDezin logo" style="height:40px"/>
+            <h3>Functional Design & Hospitality Planning</h3>
+            <p>Guest-centric layouts, functional design, and brand-aligned interiors.</p>
+            <a class="btn ghost" href="#">Learn more</a>
+          </div>
+          <div class="card">
+            <img src="./assets/logos/luxeverity.svg" alt="Luxe Verity logo" style="height:40px"/>
+            <h3>FF&E & Curated Finishes Supply</h3>
+            <p>Bespoke furniture, fixtures and finishes sourced globally, delivered flawlessly.</p>
+            <a class="btn" href="#services">Explore supply</a>
+          </div>
+          <div class="card">
+            <img src="./assets/logos/elemental.svg" alt="Elemental Infinity logo" style="height:40px"/>
+            <h3>Fit-Out & Installation</h3>
+            <p>Precision construction, seamless integration, and turnkey hotel delivery.</p>
+            <a class="btn ghost" href="#">See capability</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proven Advantage -->
+    <section class="section">
+      <div class="inner" style="color:#111">
+        <h2>Our Proven Advantage</h2>
+        <div class="grid grid-3" style="margin-top:1.4rem">
+          <div class="card"><h3>Hospitality Experience</h3><p>From boutique hotels to global brands, we bring decades of expertise.</p></div>
+          <div class="card"><h3>End-to-End Delivery</h3><p>Design, supply, and installation — brand compliant and on time.</p></div>
+          <div class="card"><h3>Global Supply Network</h3><p>Curated FF&E and finishes sourced worldwide for quality and impact.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise in Action -->
+    <section class="section">
+      <div class="bg" style="background-image:url('./assets/projects-bg.jpg')"></div>
+      <div class="overlay"></div>
+      <div class="inner">
+        <h2>Our Expertise in Action</h2>
+        <div class="grid grid-3" style="margin-top:1.2rem">
+          <div class="card">
+            <img src="./assets/projects/mawson-ext.jpg" class="img" alt="Mawson exterior"/>
+            <img src="./assets/projects/mawson-int.jpg" class="img" alt="Mawson interior"/>
+            <img src="./assets/logos/crowne-plaza.svg" style="height:30px;margin-top:.5rem" alt="Crowne Plaza logo"/>
+            <h3>CROWNE PLAZA MAWSON LAKES, SA</h3>
+          </div>
+          <div class="card">
+            <img src="./assets/projects/carlton-ext.jpg" class="img" alt="Carlton exterior"/>
+            <img src="./assets/projects/carlton-int.jpg" class="img" alt="Carlton interior"/>
+            <img src="./assets/logos/crowne-plaza.svg" style="height:30px;margin-top:.5rem" alt="Crowne Plaza logo"/>
+            <h3>CROWNE PLAZA CARLTON, VIC</h3>
+          </div>
+          <div class="card">
+            <img src="./assets/projects/werribee-ext.jpg" class="img" alt="Werribee exterior"/>
+            <img src="./assets/projects/werribee-int.jpg" class="img" alt="Werribee interior"/>
+            <img src="./assets/logos/holiday-inn.svg" style="height:30px;margin-top:.5rem" alt="Holiday Inn logo"/>
+            <h3>HOLIDAY INN WERRIBEE, VIC</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Do -->
+    <section id="services" class="section">
+      <div class="bg" style="background-image:url('./assets/section-services.jpg')"></div>
+      <div class="overlay"></div>
+      <div class="inner">
+        <h2>What We Do</h2>
+        <div class="grid grid-3" style="margin-top:1.2rem">
+          <div class="card"><h3>Guestroom Essentials</h3><p>Complete FF&E packages: casegoods, seating, beds, minibars.</p></div>
+          <div class="card"><h3>Artwork & Accessories</h3><p>Bespoke art programs and accent pieces tailored to brand identity.</p></div>
+          <div class="card"><h3>Public Space Statements</h3><p>Signature furniture and lighting elevating lobbies and restaurants.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="bg" style="background-image:url('./assets/section-testimonials.jpg')"></div>
+      <div class="overlay"></div>
+      <div class="inner">
+        <h2>Trusted by Leading Brands & Developers</h2>
+        <div class="grid grid-3" style="margin-top:1.2rem">
+          <div class="card"><p>“Luxe Verity transformed our property with flawless execution.”</p><p><strong>John Smith</strong>, IHG Australasia</p></div>
+          <div class="card"><p>“From the first mock-up to the last installed piece, complete brand compliance.”</p><p><strong>Sarah Lee</strong>, Holiday Inn Werribee</p></div>
+          <div class="card"><p>“Global supply network delivered on time despite challenges.”</p><p><strong>David Chen</strong>, Developer</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section">
+      <div class="bg" style="background-image:url('./assets/cta.jpg')"></div>
+      <div class="overlay"></div>
+      <div class="inner">
+        <h2 class="gold">Let’s discuss your next project</h2>
+        <p>Partner with Luxe Verity to bring your hospitality vision to life.</p>
+        <a class="btn" href="mailto:contact@luxeverity.com">Get in touch</a>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
